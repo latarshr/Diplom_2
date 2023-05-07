@@ -48,7 +48,7 @@ public class CreateOrderTest {
                 .statusCode(200)
                 .and()
                 .body("success", equalTo(true));
-        assertTrue("Списки ингредиентов не совпадают", Objects.equals(ingredientsRequest, ingredientsResponse));
+        assertEquals("Списки ингредиентов не совпадают", ingredientsRequest, ingredientsResponse);
     }
 
     @Test

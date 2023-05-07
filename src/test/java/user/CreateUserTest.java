@@ -15,7 +15,6 @@ public class CreateUserTest {
     private static final String REGISTER_ERROR_403_ALREADY = "User already exists";
     private static final String REGISTER_ERROR_403_REQUIRED = "Email, password and name are required fields";
     ValidatableResponse response;
-    User user;
     CreateUser request;
 
     @Test
@@ -79,4 +78,3 @@ public class CreateUserTest {
         }
     }
 }
-

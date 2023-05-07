@@ -17,6 +17,7 @@ import java.util.Objects;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class GetOrderTest {
     private static final String GET_ORDER_ERROR_401 = "You should be authorised";
@@ -59,7 +60,7 @@ public class GetOrderTest {
                 .statusCode(200)
                 .and()
                 .body("success", equalTo(true));
-        assertEquals("Списки заказов не совпадают", getOrderId.contains(createOrderId), true);
+        assertTrue(getOrderId.contains(createOrderId));;
     }
 
     @After
